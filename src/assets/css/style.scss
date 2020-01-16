@@ -1,0 +1,185 @@
+@font-face {
+ font-family: "Avenir";
+ src: url("../fonts/avenir.otf") format("otf");
+}
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,800,900&display=swap');
+html, body {
+  margin:0;
+  padding: 0px;
+  height: 100%;
+  font-family: 'Avenir', sans-serif;
+  background-color: black;
+  cursor: url('../images/cursor.svg') 2 2, auto;
+}
+header {
+  width: 100%;
+  height: 110%;
+  background-color: black;
+  background-image: url('../images/home_background.png');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  color: white;
+  a {
+    color: white;
+    text-decoration: none;
+    transition: border 0.2s;
+    cursor: url('../images/pointer.svg') 12 12, pointer;
+  }
+  & .header-head {
+    height: 10%;
+    padding-top: 70px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    & a:hover {
+      border-bottom: 2px solid white;
+    }
+  }
+  & .header-content {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+    justify-content: center;
+    & h3 {
+      margin: 0;
+      text-transform: uppercase;
+      font-weight: lighter;
+      letter-spacing: 7px;
+    }
+    & h1 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 800;
+      font-size: 120px;
+      margin: 0;
+    }
+    & h4 {
+      font-weight: lighter;
+      letter-spacing: 1px;
+      font-size: 18px;
+      margin: 0;
+      vertical-align: middle;
+      &::before {
+        content: '—';
+        margin-right: 10px;
+      }
+    }
+  }
+  & .header-footer {
+    height: 10%;
+    padding-left: 70px;
+    box-sizing: border-box;
+
+    & .call-to-scroll {
+      display: flex;
+      align-items: center;
+      & .mouse_roll {
+        animation: mouseScroll 3s infinite;
+      }
+      & a {
+        font-style: italic;
+        margin-left: 25px;
+        font-weight: lighter;
+        cursor: url('../images/pointer.svg') 0 0, pointer;
+      }
+    }
+  }
+}
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:200px 80px 200px 80px;
+  box-sizing: border-box;
+  height: 100%;
+  & .project-vue {
+    margin-left: 10%;
+    width: 80%;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    .project-snap {
+      width: 40%;
+      max-height: 90vh;
+      object-fit: cover;
+      margin-left: 20%;
+    }
+    .project-info {
+      position: absolute;
+      left: 10%;
+      h3 {
+        text-transform: uppercase;
+        font-weight: lighter;
+        font-size: 18px;
+        letter-spacing: 4px;
+        margin: 0;
+        margin-bottom: 15px;
+        &::before {
+          content: '—';
+          margin-right: 10px;
+        }
+      }
+      h2 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 800;
+        display: inline-block;
+        background-color: #4CE59A;
+        padding: 20px;
+        font-size: 50px;
+        margin: 0;
+      }
+      h4 {
+        text-transform: uppercase;
+        font-weight: lighter;
+        letter-spacing: 3px;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        font-style: italic;
+        border: 1px solid white;
+        padding: 15px 20px;
+        font-weight: lighter;
+        position: absolute;
+        transition: background-color 0.5s;
+        cursor: url('../images/pointer.svg') 0 0, pointer;
+
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
+
+    }
+  }
+  &::before{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    content:'';
+    background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 1));
+    top: -10%;
+  }
+  .notice {
+    color: white;
+    font-weight: lighter;
+    position: absolute;
+    top: 10%;
+  }
+}
+@keyframes mouseScroll {
+  from {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(12px);
+
+  }
+}
