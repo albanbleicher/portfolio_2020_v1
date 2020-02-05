@@ -4,6 +4,7 @@ import './App.css';
 import Animate from 'animate.css-react'
 import 'animate.css/animate.css'
 import Projet from './components/Projet'
+import Modal from './components/Modal'
 import img_apdc from './assets/images/projects/apdc.png'
 import img_webdoc from './assets/images/projects/webdoc.png'
 import img_pao from './assets/images/projects/pao.png'
@@ -24,7 +25,10 @@ class App extends Component {
         img: img_apdc,
         date:'20 SEPT 2019',
         contexte:'asso',
-        type:'thème & site Wordpress'
+        type:'thème & site Wordpress',
+        largeDesc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        modalScreenshots: [img_apdc, img_pao]
+
       },
       {
         titre:'Découvrir l\'autisme',
@@ -95,21 +99,33 @@ class App extends Component {
   render()
   { return (
     <Fragment>
+    <main  id='area'>
+    <div className='project-vue'>
     <img className='upArrow' src={up_arrow} alt='left_arrow' onClick={this.handleClickPrev} />
     <img className='rightArrow' src={left_arrow} alt='left_arrow' onClick={this.handleClickPrev} />
 
-    <Animate className="animateWrapper" >
     <Projet
     titre={this.state.objectData[this.state.i].titre}
     img={this.state.objectData[this.state.i].img}
     date={this.state.objectData[this.state.i].date}
     contexte={this.state.objectData[this.state.i].contexte}
     type={this.state.objectData[this.state.i].type}
+    largeDesc={this.state.objectData[this.state.i].largeDesc}
     />
-    </Animate>
+
     <img className='downArrow' src={down_arrow} alt='right_arrow' onClick={this.handleClickNext} />
     <img className='leftArrow' src={right_arrow} alt='left_arrow' onClick={this.handleClickPrev} />
 
+    </div>
+    </main>
+    <Modal
+    titre={this.state.objectData[this.state.i].titre}
+    img={this.state.objectData[this.state.i].img}
+    date={this.state.objectData[this.state.i].date}
+    contexte={this.state.objectData[this.state.i].contexte}
+    type={this.state.objectData[this.state.i].type}
+    largeDesc={this.state.objectData[this.state.i].largeDesc}
+    />
     </Fragment>
 
   );
