@@ -523,6 +523,9 @@ main .project-vue > div {
   h1 {
     font-size: 80px !important;
   }
+  main {
+    padding: 100px 0 200px 0;
+  }
   main .project-vue .project-info h2 {
     padding: 10px;
     font-size: 30px;
