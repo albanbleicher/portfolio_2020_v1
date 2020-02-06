@@ -152,12 +152,12 @@ main .project-vue {
 }
 .upArrow {
   position: absolute;
-  top: -40%;
+  top: 0;
   display: none;
 }
 .downArrow {
   position: absolute;
-  bottom: -70%;
+  bottom: -20%;
   display: none;
 }
 .leftArrow {
