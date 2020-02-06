@@ -1,3 +1,8 @@
+@font-face {
+ font-family: "Avenir";
+ src: url("/assets/fonts/avenir.otf") format("otf");
+}
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600i,700,800&display=swap');
 body,
 html {
     margin: 0;
@@ -5,7 +10,8 @@ html {
     height: 100%;
     font-family: Avenir, sans-serif;
     background-color: #000;
-    cursor: url(assets/images/cursor.svg) 2 2, auto
+    cursor: url(assets/images/cursor.svg) 2 2, auto;
+    overflow-y: 0;
 }
 header {
     width: 100%;
@@ -131,7 +137,7 @@ main .project-vue {
     color: #fff;
     display: flex;
     align-items: center;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-around;
 }
 #project {
@@ -286,6 +292,29 @@ main .notice {
         opacity: 1;
     }
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+
+  100% {
+    opacity: 1;
+    display: -webkit-flex !important;
+    display: -ms-flex !important;
+    display: flex !important;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
 @keyframes animSlideNext {
   0% {
     opacity: 0;
@@ -296,6 +325,12 @@ main .notice {
 }
 #root {
   height: 100%;
+}
+.show {
+  animation: fadeIn 1s forwards;
+}
+.hide {
+  animation: fadeOut 1s forwards;
 }
 footer {
   height: 15%;
@@ -309,23 +344,77 @@ footer {
   position: fixed;
   width: 100%;
   height: 100%;
-  /* background-color: red; */
-  backdrop-filter: blur(100px);
+  background-color: rgba(0,0,0,0.8);
   top: 0;
   z-index: 999;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 .modal {
   background-color: black;
   color: white;
-  width: 70%;
-  height: 80%;
-  padding: 40px;
+  width: 100%;
+  height: 100%;
+  padding: 60px;
   box-sizing:border-box;
   overflow-y: scroll;
+}
+.modal img {
+  width: 450px;
+  margin:20px;
+}
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.modalClose {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+.modal h2{
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  display: inline-block;
+  background-color: #4ce59a;
+  padding: 15px;
+  font-size: 35px;
+  margin: 0
+}
+.modal .sub {
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 3px
+}
+.modalHead {
+  margin-bottom: 100px;
+  text-align: right;
+}
+.modalFooter {
+  margin-top: 50px;
+  text-align: center;
+}
+.modalText {
+  margin-bottom: 50px;
+}
+.gallery {
+  margin-top: 50px;
+}
+.modalContent a {
+  color: #000;
+  text-decoration: none;
+  font-style: italic;
+  border: 1px solid #fff;
+  padding: 15px 20px;
+  font-weight: lighter;
+  background-color: white;
+  transition: background-color .5s;
+  transition: transform 0.5s ease;
 }
 @media only screen and (max-width:680px) {
 

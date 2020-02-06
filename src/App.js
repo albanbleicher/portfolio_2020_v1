@@ -12,8 +12,8 @@ import img_studio from './assets/images/projects/studio.png'
 import img_portrait from './assets/images/projects/autoportrait.png'
 import img_metro from './assets/images/projects/metro.png'
 import img_deckapps from './assets/images/projects/deckapps.png'
-import left_arrow from './assets/images/left_arrow.svg'
 import right_arrow from './assets/images/right_arrow.svg'
+import left_arrow from './assets/images/left_arrow.svg'
 import up_arrow from './assets/images/up_arrow.svg'
 import down_arrow from './assets/images/down_arrow.svg'
 
@@ -26,8 +26,9 @@ class App extends Component {
         date:'20 SEPT 2019',
         contexte:'asso',
         type:'thème & site Wordpress',
-        largeDesc:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        modalScreenshots: [img_apdc, img_pao]
+        largeDesc:'En tant que membre de l\'équipe communication de l\'association A Portée d\'Chœur, j\'ai proposé mes services afin de moderniser le site de l\'association. Le site fonctionne via le CMS Wordpress. J\'ai donc réalisé un thème compatible avec le CMS. Ce thème comprend une page d\'accueil, un modèle d\'article, un modèle de page et un modèle de formulaire de recherche. Le tout à été réaliser en HTML, CSS et Javascript.',
+        modalScreenshots: [img_apdc, img_pao],
+        linkModal:'http://apdc-auray.com/asso'
 
       },
       {
@@ -35,7 +36,10 @@ class App extends Component {
         img: img_webdoc,
         date:'6 JAN 2020',
         contexte:'MMI',
-        type:'Webdocumentaire'
+        type:'Webdocumentaire',
+        largeDesc:'Dans le cadre du module d\'infographie et de développement web, nous devions réaliser un webdocumentaire sur le sujet de notre choix.',
+        modalScreenshots: [img_webdoc],
+        linkModal:'hey'
       },
       {
         titre:'health a week',
@@ -80,9 +84,9 @@ class App extends Component {
     if(this.state.i== this.state.objectData.length-1) {
       this.setState({
         i:0})
+
     } else {
       this.setState({...this.state.i++})
-
     }
   }
 
@@ -95,6 +99,19 @@ class App extends Component {
     } else {
       this.setState({...this.state.i--})
     }
+
+  }
+  openModal = () => {
+    var modal = document.getElementById('projectModal')
+    modal.classList.add('show');
+    modal.style.display = 'flex';
+modal.classList.remove('hide');
+  }
+  closeModal = () => {
+    var modal = document.getElementById('projectModal')
+    modal.classList.add('hide');
+    modal.style.display = 'close';
+modal.classList.remove('show');
   }
   render()
   { return (
@@ -102,7 +119,7 @@ class App extends Component {
     <main  id='area'>
     <div className='project-vue'>
     <img className='upArrow' src={up_arrow} alt='left_arrow' onClick={this.handleClickPrev} />
-    <img className='rightArrow' src={left_arrow} alt='left_arrow' onClick={this.handleClickPrev} />
+    <img className='leftArrow' src={left_arrow} alt='left_arrow' onClick={this.handleClickPrev} />
 
     <Projet
     titre={this.state.objectData[this.state.i].titre}
@@ -111,10 +128,11 @@ class App extends Component {
     contexte={this.state.objectData[this.state.i].contexte}
     type={this.state.objectData[this.state.i].type}
     largeDesc={this.state.objectData[this.state.i].largeDesc}
+    openModal={this.openModal}
     />
 
     <img className='downArrow' src={down_arrow} alt='right_arrow' onClick={this.handleClickNext} />
-    <img className='leftArrow' src={right_arrow} alt='left_arrow' onClick={this.handleClickPrev} />
+    <img className='rightArrow' src={right_arrow} alt='right_arrow' onClick={this.handleClickNext} />
 
     </div>
     </main>
@@ -125,6 +143,9 @@ class App extends Component {
     contexte={this.state.objectData[this.state.i].contexte}
     type={this.state.objectData[this.state.i].type}
     largeDesc={this.state.objectData[this.state.i].largeDesc}
+    modalScreenshots={this.state.objectData[this.state.i].modalScreenshots}
+    linkModal={this.state.objectData[this.state.i].linkModal}
+    closeModal={this.closeModal}
     />
     </Fragment>
 
