@@ -27,8 +27,7 @@ header {
     z-index: 5;
 }
 .bg {
-  background-image: url(assets/images/home_for_blur.png);
-  background-size: cover;
+  background-color: black;
   position: absolute;
   z-index: 0;
   width: 100%;
@@ -481,6 +480,8 @@ main .project-vue > div {
     background-image: none;
   }
   .bg {
+    background-image: url(assets/images/home_for_blur.png);
+    background-size: cover;
     filter: blur(20px);
   }
   header .header-head {
