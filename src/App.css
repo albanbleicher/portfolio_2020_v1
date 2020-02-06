@@ -8,9 +8,11 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
+    max-width: 100%;
     font-family: Avenir, sans-serif;
     background-color: #000;
     cursor: url(assets/images/cursor.svg) 2 2, auto;
+    overflow-x: hidden;
 }
 header {
     width: 100%;
@@ -26,7 +28,6 @@ header {
 }
 .bg {
   background-image: url(assets/images/home_for_blur.png);
-  background-position: left left;
   background-size: cover;
   position: absolute;
   z-index: 0;
@@ -126,7 +127,8 @@ main {
     align-items: center;
     padding: 200px 80px 200px 80px;
     box-sizing: border-box;
-    height: 100%
+    height: 100%;
+    background-color: #000;
 }
 
 main .project-vue {
@@ -332,12 +334,15 @@ main .notice {
   animation: fadeOut 1s forwards;
 }
 footer {
+  position: relative;
+  z-index: 20;
   height: 15%;
   padding: 20px;
   text-align: center;
   box-sizing: border-box;
   color: white;
   font-size: 13px;
+  background-color: #000;
 }
 .overlay {
   position: fixed;
