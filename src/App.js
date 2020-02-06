@@ -110,7 +110,7 @@ modal.classList.remove('hide');
   closeModal = () => {
     var modal = document.getElementById('projectModal')
     modal.classList.add('hide');
-    modal.style.display = 'close';
+    modal.style.display = 'none';
 modal.classList.remove('show');
   }
   render()

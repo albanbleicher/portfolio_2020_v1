@@ -11,7 +11,6 @@ html {
     font-family: Avenir, sans-serif;
     background-color: #000;
     cursor: url(assets/images/cursor.svg) 2 2, auto;
-    overflow-y: 0;
 }
 header {
     width: 100%;
@@ -153,12 +152,12 @@ main .project-vue {
 }
 .upArrow {
   position: absolute;
-  top: -60%;
+  top: -40%;
   display: none;
 }
 .downArrow {
   position: absolute;
-  bottom: -100%;
+  bottom: -70%;
   display: none;
 }
 .leftArrow {
@@ -416,6 +415,61 @@ footer {
   transition: background-color .5s;
   transition: transform 0.5s ease;
 }
+@media only screen and (max-width:1000px) {
+  main .project-vue .project-info {
+  left: 0;
+  right: 0;
+  }
+  .leftArrow, .rightArrow {
+    display: none;
+  }
+  .downArrow, .upArrow {
+    display: block;
+  }
+  main .project-vue {
+    margin-left: 0;
+  }
+  main .project-vue .project-info h2 {
+    font-size: 40px;
+    padding: 15px 15px 15px 10px;
+    max-width: 80%;
+    text-align: center;
+  }
+  main .project-vue .project-info {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 80%;
+
+  }
+  main .project-vue .project-info h3 {
+    text-align: center;
+  }
+  main .project-vue .project-info h3::before {
+    display: none;
+  }
+main .project-vue .project-info a {
+  bottom: -30%;
+}
+main .project-vue > div {
+  display: flex;
+  justify-content: center;
+}
+  main .project-vue .project-snap {
+    visibility: hidden;
+    margin: 0;
+  }
+  main .project-vue .project-info h4  {
+    text-align: center
+  }
+
+}
+
 @media only screen and (max-width:680px) {
 
   header {
@@ -469,55 +523,18 @@ footer {
   h1 {
     font-size: 80px !important;
   }
-}
-@media only screen and (max-width:1000px) {
-  main .project-vue .project-info {
-  left: 0;
-  right: 0;
-  }
-  .leftArrow, .rightArrow {
-    display: none;
-  }
-  .downArrow, .upArrow {
-    display: block;
-  }
-  main .project-vue {
-    margin-left: 0;
-  }
   main .project-vue .project-info h2 {
-    font-size: 40px;
-    padding: 15px 15px 15px 10px;
-    max-width: 80%;
+    padding: 10px;
+    font-size: 30px;
+  }
+  .modal h2 {
     text-align: center;
+    font-size: 25px;
   }
-  main .project-vue .project-info {
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-width: 80%;
-
+  .modal p {
+    text-align: justify;
   }
-  main .project-vue .project-info h3::before {
-    display: none;
+  .modal img {
+    width: 100%;
   }
-main .project-vue .project-info a {
-  bottom: -30%;
-}
-main .project-vue > div {
-  display: flex;
-  justify-content: center;
-}
-  main .project-vue .project-snap {
-    visibility: hidden;
-    margin: 0;
-  }
-  main .project-vue .project-info h4  {
-    text-align: center
-  }
-
 }
