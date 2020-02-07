@@ -344,6 +344,10 @@ footer {
   font-size: 13px;
   background-color: #000;
 }
+footer a {
+  color: white;
+  text-decoration: none;
+}
 .overlay {
   position: fixed;
   width: 100%;
