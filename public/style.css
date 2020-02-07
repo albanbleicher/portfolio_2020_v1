@@ -45,7 +45,7 @@ header .header-head {
   margin-right: 20px;
 }
 .bg {
-  background-image: url('about/about_background.png');
+  background-image: url('about/about_background.jpg');
   background-position: center center;
   position: absolute;
   z-index: 0;
