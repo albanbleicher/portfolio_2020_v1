@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import Animate from 'animate.css-react'
 import 'animate.css/animate.css'
 const Modal = (props) =>  {
+  const modalScreens = props.modalScreenshots
   return (
     <Animate enter="flipInX" durationChange={1000} >
     <Fragment>
@@ -21,13 +22,9 @@ const Modal = (props) =>  {
     <a href={props.linkModal} target='_blank' >Voir le site</a>
 
     <div className='gallery'>
-    <img src={props.modalScreenshots[0]}/>
-    <img src={props.modalScreenshots[0]}/>
-    <img src={props.modalScreenshots[0]}/>
-    <img src={props.modalScreenshots[0]}/>
-    <img src={props.modalScreenshots[0]}/>
-    <img src={props.modalScreenshots[0]}/>
-      <img src={props.modalScreenshots[0]}/>
+    {modalScreens.map((value) => {
+        return <img src={value}/>
+      })}
 
     </div>
     </div>

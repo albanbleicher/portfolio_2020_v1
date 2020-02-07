@@ -116,55 +116,10 @@ header .header-footer {
 .onMobileAvatar{
   display: none;
 }
-@keyframes mouseScroll {
-    from {
-        transform: translateY(0);
-        opacity: 1
-    }
-    to {
-        opacity: 0;
-        transform: translateY(12px)
-    }
-}
-@keyframes animName {
-    0% {
-        transform: translateX(-50%);
-    }
-    60% {
-        transform: translateX(5%)
-    }
-    100% {
-        transform: translateX(0)
-    }
-}
-@keyframes animSub {
-    50% {
-      opacity: 0;
-        transform: translateY(-50px);
-    }
-    70% {
-      opacity: 1;
-        transform: translateY(20px);
-    }
-    85% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-@keyframes animSlideNext {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-#root {
-  height: 100%;
+a.aboutLink {
+  text-decoration: none;
+  color: white;
+  border-bottom:1px dotted white;
 }
 footer {
   height: 15%;
@@ -196,6 +151,7 @@ footer {
       position: absolute;
       z-index: 999;
   }
+
   .bg {
     background-image: url('about/about.jpg');
     background-position: center center;

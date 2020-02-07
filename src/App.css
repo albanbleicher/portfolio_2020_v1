@@ -425,9 +425,6 @@ footer a {
   transition: transform 0.5s ease;
 }
 @media only screen and (max-width:1000px) {
-  header .header-footer .call-to-scroll a {
-    margin-left: 0;
-  }
   main .project-vue .project-info {
   left: 0;
   right: 0;
@@ -479,10 +476,12 @@ main .project-vue > div {
   main .project-vue .project-info h4  {
     text-align: center
   }
-
 }
 
 @media only screen and (max-width:680px) {
+  header .header-footer .call-to-scroll a {
+    margin-left: 0;
+  }
 
   header {
     background-image: none;
