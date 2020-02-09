@@ -19,7 +19,7 @@ class App extends Component {
       {
         titre:'Découvrir l\'autisme',
         img: webdoc[0],
-        date:'6 JAN 2020',
+        date:'En cours',
         contexte:'MMI',
         type:'Webdocumentaire',
         largeDesc:'Dans le cadre du module d\'infographie et de développement web, nous devions réaliser un webdocumentaire sur le sujet de notre choix. A travers mon webdocumentaire, vous pourrez découvrir les mots-clés concernants l\'autisme, mais  aussi des témoignages et des vidéos explicatives, afin d\'informer de manière interactive.',
