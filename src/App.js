@@ -55,7 +55,7 @@ class App extends Component {
         type:'Rédaction d\'article & PAO',
         largeDesc:'Ce projet à été réalisé dans le cadre du module  de théories de l\'information et de la communicatio, et du module de publication assistée par ordinateur, où nous devions mettre en page un article que nous avions rédigé',
         modalScreenshots: health_a_week,
-        linkModal:'http://docs/albanbleicher.fr/healthAWeek.pdf'
+        linkModal:'https://albanbleicher.fr/files/healthAWeek.pdf'
       },
       {
         titre:'Digital happiness',
