@@ -554,3 +554,51 @@ main .project-vue > div {
     width: 100%;
   }
 }
+@media only screen and (max-height:660px) {
+  .downArrow {
+    bottom: -35%;
+  }
+  .upArrow {
+    top: -10%;
+  }
+}
+@media only screen and (max-height:600px) {
+  .downArrow {
+    bottom: -45%;
+  }
+  .upArrow {
+    top: -20%;
+  }
+}
+@media only screen and (max-height:555px) {
+  .downArrow {
+    bottom: -70%;
+  }
+  .upArrow {
+    top: -40%;
+  }
+}
+@media only screen and (max-height:500px) {
+  .downArrow {
+    bottom: -90%;
+  }
+  .upArrow {
+    top: -60%;
+  }
+}
+@media only screen and (max-height:480px) {
+  .downArrow {
+    bottom: -110%;
+  }
+  .upArrow {
+    top: -70%;
+  }
+}
+@media only screen and (max-height:450px) {
+  .downArrow {
+    bottom: -150%;
+  }
+  .upArrow {
+    top: -90%;
+  }
+}

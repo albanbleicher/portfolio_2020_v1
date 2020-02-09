@@ -65,7 +65,7 @@ class App extends Component {
         type:'Autoportrait graphique',
         largeDesc:'En tant que membre de l\'équipe communication de l\'association A Portée d\'Chœur, j\'ai proposé mes services afin de moderniser le site de l\'association. Le site fonctionne via le CMS Wordpress. J\'ai donc réalisé un thème compatible avec le CMS. Ce thème comprend une page d\'accueil, un modèle d\'article, un modèle de page et un modèle de formulaire de recherche. Le tout à été réaliser en HTML, CSS et Javascript.',
         modalScreenshots: [digitalHapiness],
-        linkModal:false;
+        linkModal:false
       }
     ],
     i:0
