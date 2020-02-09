@@ -123,16 +123,21 @@ modal.classList.remove('show');
     <img className='upArrow' src={up_arrow} alt='left_arrow' onClick={this.handleClickPrev} />
     <img className='leftArrow' src={left_arrow} alt='left_arrow' onClick={this.handleClickPrev} />
 
-    <Projet
-    titre={this.state.objectData[this.state.i].titre}
-    img={this.state.objectData[this.state.i].img}
-    date={this.state.objectData[this.state.i].date}
-    contexte={this.state.objectData[this.state.i].contexte}
-    type={this.state.objectData[this.state.i].type}
-    largeDesc={this.state.objectData[this.state.i].largeDesc}
-    openModal={this.openModal}
-    />
-
+    {
+      this.state.objectData.map((projet, i) => {
+      return (
+        <Projet
+        titre={projet.titre}
+        img={projet.img}
+        date={projet.date}
+        contexte={projet.contexte}
+        type={projet.type}
+        largeDesc={projet.largeDesc}
+        openModal={this.openModal}
+        hidden={i !== this.state.i ? true : false}
+        />
+      )
+    })}
     <img className='downArrow' src={down_arrow} alt='right_arrow' onClick={this.handleClickNext} />
     <img className='rightArrow' src={right_arrow} alt='right_arrow' onClick={this.handleClickNext} />
 
