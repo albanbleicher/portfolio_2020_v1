@@ -8,7 +8,7 @@ const Projet = (props) =>  {
   return (
     <Fragment>
 
-    <div id='project'>
+    <div className={props.hidden ? 'project hidden' : 'project'} id='project'>
       <img src={props.img} alt='Aperçu projet' className='project-snap' />
       <div className='project-info'>
         <h3>{props.date}, {props.contexte}</h3>
