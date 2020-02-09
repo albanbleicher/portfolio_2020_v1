@@ -15,6 +15,16 @@ export const health_a_week = [
   require('./assets/images/projects/health_a_week/3.jpg'),
   require('./assets/images/projects/health_a_week/4.jpg')
 ]
+export const slash = [
+  require('./assets/images/projects/slash/1.png'),
+  require('./assets/images/projects/slash/2.png'),
+  require('./assets/images/projects/slash/3.png'),
+  require('./assets/images/projects/slash/4.png'),
+  require('./assets/images/projects/slash/5.png'),
+  require('./assets/images/projects/slash/6.png'),
+  require('./assets/images/projects/slash/7.png'),
+  require('./assets/images/projects/slash/8.png')
+]
 export const digitalHapiness = require('./assets/images/projects/digital-hapiness.png');
 export const right_arrow = require('./assets/images/right_arrow.svg');
 export const up_arrow = require('./assets/images/up_arrow.svg');

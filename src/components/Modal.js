@@ -3,6 +3,13 @@ import Animate from 'animate.css-react'
 import 'animate.css/animate.css'
 const Modal = (props) =>  {
   const modalScreens = props.modalScreenshots
+  const renderModalLink = ()  => {
+
+    if(props.linkModal!=false){
+            return <a href={props.linkModal} target='_blank' >Voir le site</a>
+          }
+
+  }
   return (
     <Animate enter="flipInX" durationChange={1000} >
     <Fragment>
@@ -19,7 +26,7 @@ const Modal = (props) =>  {
     <div className='contentWrap'><div className='modalText' >
     <p>{props.largeDesc}</p>
     </div>
-    <a href={props.linkModal} target='_blank' >Voir le site</a>
+    {renderModalLink()}
 
     <div className='gallery'>
     {modalScreens.map((value) => {

@@ -6,6 +6,7 @@ import {
   apdc,
   webdoc,
   health_a_week,
+  slash,
   digitalHapiness,
   right_arrow,
   left_arrow,
@@ -22,8 +23,8 @@ class App extends Component {
         contexte:'MMI',
         type:'Webdocumentaire',
         largeDesc:'Dans le cadre du module d\'infographie et de développement web, nous devions réaliser un webdocumentaire sur le sujet de notre choix.',
-        modalScreenshots: [webdoc[0],webdoc[1],webdoc[2],webdoc[3]],
-        linkModal:'hey'
+        modalScreenshots: webdoc,
+        linkModal:false
       },
       {
         titre:'A portée d\'Choeur',
@@ -32,17 +33,20 @@ class App extends Component {
         contexte:'asso',
         type:'thème & site Wordpress',
         largeDesc:'En tant que membre de l\'équipe communication de l\'association A Portée d\'Chœur, j\'ai proposé mes services afin de moderniser le site de l\'association. Le site fonctionne via le CMS Wordpress. J\'ai donc réalisé un thème compatible avec le CMS. Ce thème comprend une page d\'accueil, un modèle d\'article, un modèle de page et un modèle de formulaire de recherche. Le tout à été réaliser en HTML, CSS et Javascript.',
-        modalScreenshots: [apdc[0], apdc[1], apdc[2]],
+        modalScreenshots: apdc,
         linkModal:'http://apdc-auray.com/asso'
 
       },
-      // {
-      //   titre:'Slash',
-      //   img: img_slash,
-      //   date: '22 juin 2019',
-      //   contexte:'MMI',
-      //   type:'Web application'
-      // },
+      {
+        titre:'Slash',
+        img: slash[0],
+        date: '22 juin 2019',
+        contexte:'MMI',
+        type:'Web application',
+        largeDesc:'Dans le cadre des projets tuteurés de première année de DUT MMI, nous devions créer un site pour présenter les alternatives à la voiture. Nous avons créer avec mon groupe,  Slash. C\'est un site proposant des vidéos explicatives, un simulateur de trajets et de gains coût/énergie, ainsi qu\'un espace communautaire. Sur ce projet, mon principal rôle était l\'intégration web et la gestion des accès aux espaces membre. J\'ai notamment utlisé Adobe XD, puis ensuite développé en HTML, CSS, jQuery et PHP.',
+        modalScreenshots: slash,
+        linkModal:false
+      },
       {
         titre:'health a week',
         img: health_a_week[0],
@@ -50,7 +54,7 @@ class App extends Component {
         contexte:'MMI',
         type:'Rédaction d\'article & PAO',
         largeDesc:'En tant que membre de l\'équipe communication de l\'association A Portée d\'Chœur, j\'ai proposé mes services afin de moderniser le site de l\'association. Le site fonctionne via le CMS Wordpress. J\'ai donc réalisé un thème compatible avec le CMS. Ce thème comprend une page d\'accueil, un modèle d\'article, un modèle de page et un modèle de formulaire de recherche. Le tout à été réaliser en HTML, CSS et Javascript.',
-        modalScreenshots: [health_a_week[0], health_a_week[1], health_a_week[2],health_a_week[3]],
+        modalScreenshots: health_a_week,
         linkModal:'http://docs/albanbleicher.fr/healthAWeek.pdf'
       },
       {
@@ -60,7 +64,7 @@ class App extends Component {
         contexte:'MMI',
         type:'Autoportrait graphique',
         largeDesc:'En tant que membre de l\'équipe communication de l\'association A Portée d\'Chœur, j\'ai proposé mes services afin de moderniser le site de l\'association. Le site fonctionne via le CMS Wordpress. J\'ai donc réalisé un thème compatible avec le CMS. Ce thème comprend une page d\'accueil, un modèle d\'article, un modèle de page et un modèle de formulaire de recherche. Le tout à été réaliser en HTML, CSS et Javascript.',
-        modalScreenshots: [digitalHapiness[0]],
+        modalScreenshots: [digitalHapiness],
         linkModal:'https://behance.net/albchr'
       }
     ],
