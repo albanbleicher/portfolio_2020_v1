@@ -1,17 +1,14 @@
 import React, { Fragment } from 'react'
-import Animate from 'animate.css-react'
-import 'animate.css/animate.css'
 const Modal = (props) =>  {
   const modalScreens = props.modalScreenshots
   const renderModalLink = ()  => {
 
     if(props.linkModal!=false){
-            return <a href={props.linkModal} target='_blank' >Voir le site</a>
+            return <a href={props.linkModal} target='_blank' >Accéder au projet</a>
           }
 
   }
   return (
-    <Animate enter="flipInX" durationChange={1000} >
     <Fragment>
 <div id='projectModal' className='overlay'>
   <div className='modal'>
@@ -29,8 +26,8 @@ const Modal = (props) =>  {
     {renderModalLink()}
 
     <div className='gallery'>
-    {modalScreens.map((value) => {
-        return <img src={value}/>
+    {modalScreens.map((value, key) => {
+        return <img key={key} src={value}/>
       })}
 
     </div>
@@ -40,7 +37,6 @@ const Modal = (props) =>  {
 </div>
 
 </Fragment>
-    </Animate>
 )
 }
 export default Modal

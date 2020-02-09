@@ -22,7 +22,7 @@ class App extends Component {
         date:'6 JAN 2020',
         contexte:'MMI',
         type:'Webdocumentaire',
-        largeDesc:'Dans le cadre du module d\'infographie et de développement web, nous devions réaliser un webdocumentaire sur le sujet de notre choix.',
+        largeDesc:'Dans le cadre du module d\'infographie et de développement web, nous devions réaliser un webdocumentaire sur le sujet de notre choix. A travers mon webdocumentaire, vous pourrez découvrir les mots-clés concernants l\'autisme, mais  aussi des témoignages et des vidéos explicatives, afin d\'informer de manière interactive.',
         modalScreenshots: webdoc,
         linkModal:false
       },
@@ -53,7 +53,7 @@ class App extends Component {
         date:'3 AVR 2019',
         contexte:'MMI',
         type:'Rédaction d\'article & PAO',
-        largeDesc:'En tant que membre de l\'équipe communication de l\'association A Portée d\'Chœur, j\'ai proposé mes services afin de moderniser le site de l\'association. Le site fonctionne via le CMS Wordpress. J\'ai donc réalisé un thème compatible avec le CMS. Ce thème comprend une page d\'accueil, un modèle d\'article, un modèle de page et un modèle de formulaire de recherche. Le tout à été réaliser en HTML, CSS et Javascript.',
+        largeDesc:'Ce projet à été réalisé dans le cadre du module  de théories de l\'information et de la communicatio, et du module de publication assistée par ordinateur, où nous devions mettre en page un article que nous avions rédigé',
         modalScreenshots: health_a_week,
         linkModal:'http://docs/albanbleicher.fr/healthAWeek.pdf'
       },
@@ -70,7 +70,9 @@ class App extends Component {
     ],
     i:0
   }
-
+   componentWillMount = () => {
+      document.addEventListener("keydown", this.closeModalEsc, false);
+    }
   handleClickNext = () => {
     if(this.state.i === this.state.objectData.length-1) {
       this.setState({
@@ -104,13 +106,19 @@ modal.classList.remove('hide');
     modal.style.display = 'none';
 modal.classList.remove('show');
   }
-  handleKey = () => {
-    console.log('ok');
+  closeModalEsc = (e) => {
+    var modal = document.getElementById('projectModal')
+    console.log(e);
+    if(e.keyCode ===27) {
+      modal.classList.add('hide');
+      modal.style.display = 'none';
+  modal.classList.remove('show');
+    }
   }
   render()
   { return (
     <Fragment>
-    <main  id='area'  onKeyPress={this.handleKey}>
+    <main>
     <div className='project-vue'>
     <img className='upArrow' src={up_arrow} alt='left_arrow' onClick={this.handleClickPrev} />
     <img className='leftArrow' src={left_arrow} alt='left_arrow' onClick={this.handleClickPrev} />
