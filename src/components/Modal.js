@@ -13,7 +13,7 @@ const Modal = (props) =>  {
 <div id='projectModal' className='overlay'>
   <div className='modal'>
   <div className='modalHead'>
-    <a className='modalClose' onClick={props.closeModal}>Fermer (esc)</a>
+    <a className='modalClose' onClick={props.closeModal}>Fermer</a>
   </div>
   <div className='modalContent'>
     <div className='contentHead'>
