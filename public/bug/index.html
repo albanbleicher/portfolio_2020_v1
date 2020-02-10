@@ -13,22 +13,27 @@
     <p>Plusieurs personnes ayant expérimentés des bugs, j'ai mis en place ce formulaire pour les repertoriés.</p>
   </div>
   <div class="container">
-    <form data-netlify="true" name="bug"  method="POST">
+    <form name='bug' method="POST" data-netlify="true">
     <div class="form-group">
       <label for="device">Appareil utilisé</label>
-      <input required type="text" class="form-control" id="device" aria-describedby="deviceHelp">
+      <input name='device' required type="text" class="form-control" id="device" aria-describedby="deviceHelp">
     </div>
     <div class="form-group">
       <label for="nav">Navigateur</label>
-      <input required type="text" class="form-control" id="nav">
+      <input name='nav' required type="text" class="form-control" id="nav">
     </div>
     <div class="form-group">
       <label for="bugDesc">Décrivez votre bug</label>
       <textarea required class="form-control" id="bugDesc" rows="3"></textarea>
     </div>
     <div class="input-group mb-3">
-    <input type="file" multiple class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-    <label class="custom-file-label" for="inputGroupFile01">Téléchargez des captures d'écran</label>
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroupFileAddon01">Capture d'écran</span>
+  </div>
+  <div class="custom-file">
+    <input name='screen' type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+    <label class="custom-file-label" for="inputGroupFile01">Choisir un fichier</label>
+  </div>
 </div>
     <button type="submit" class="btn btn-primary">Envoyer</button>
   </form>
