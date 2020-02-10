@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
   <title>Alban Bleicher | Bugs</title>
 </head>
 <body>
@@ -26,6 +26,10 @@
       <label for="bugDesc">Décrivez votre bug</label>
       <textarea required class="form-control" id="bugDesc" rows="3"></textarea>
     </div>
+    <div class="input-group mb-3">
+    <input type="file" multiple class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+    <label class="custom-file-label" for="inputGroupFile01">Téléchargez des captures d'écran</label>
+</div>
     <button type="submit" class="btn btn-primary">Envoyer</button>
   </form>
   </div>
