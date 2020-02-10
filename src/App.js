@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import './App.css';
+import './App.min.css';
 import Projet from './components/Projet'
 import Modal from './components/Modal'
 import {
