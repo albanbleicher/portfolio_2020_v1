@@ -5,8 +5,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600i,700,800&display=swap');
 /* classe hidden pour cacher les components non actifs */
 .hidden {
-  display: none!important;
+  display: none!important; 
 }
+
 body,
 html {
     margin: 0;
