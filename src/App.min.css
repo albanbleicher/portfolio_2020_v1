@@ -14,7 +14,7 @@ body, html {
   max-width: 100%;
   font-family: Avenir, sans-serif;
   background-color: #000;
-  cursor: url(assets/images/cursor.svg) 2 2, auto;
+  cursor: none;
   overflow-x: hidden
 }
 
@@ -44,7 +44,7 @@ header a {
   color: #fff;
   text-decoration: none;
   transition: border .2s;
-  cursor: url(assets/images/pointer.svg) 12 12, pointer
+  cursor: none
 }
 
 header .header-head {
@@ -120,7 +120,7 @@ header .header-footer .call-to-scroll a {
   font-style: italic;
   margin-left: 25px;
   font-weight: lighter;
-  cursor: url(assets/images/pointer.svg) 0 0, pointer
+  cursor: none
 }
 
 main {
@@ -239,7 +239,7 @@ main .project-vue .project-info a {
   font-weight: lighter;
   position: absolute;
   transition: background-color .5s;
-  cursor: url(assets/images/pointer.svg) 0 0, pointer;
+  cursor: none;
   transition: transform .5s ease
 }
 
