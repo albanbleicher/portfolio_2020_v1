@@ -120,6 +120,7 @@ modal.classList.remove('show');
     <Fragment>
     <main>
     <div className='project-vue'>
+
     <img className='upArrow' src={up_arrow} alt='left_arrow' onClick={this.handleClickPrev} />
     <img className='leftArrow' src={left_arrow} alt='left_arrow' onClick={this.handleClickPrev} />
 
@@ -132,7 +133,6 @@ modal.classList.remove('show');
         date={projet.date}
         contexte={projet.contexte}
         type={projet.type}
-        largeDesc={projet.largeDesc}
         openModal={this.openModal}
         hidden={i !== this.state.i ? true : false}
         />
