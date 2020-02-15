@@ -1,0 +1,13 @@
+main, header{
+   margin: 5px;
+   padding: 5px;
+   border: 2px solid black;
+}
+header button{
+   margin: 0px 5px;
+}
+
+main > .component {
+   max-width: 1024px;
+   max-height: 800px;
+}

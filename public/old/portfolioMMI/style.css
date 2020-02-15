@@ -1,0 +1,1177 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&subset=chinese-simplified');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Rubik', sans-serif;
+    background-color: #342525;
+    scroll-behavior: smooth;
+    position: relative; /* sinon overflow-x hidden ne marche pas sur firefox mobile*/
+    overflow-x: hidden !important; /*sinon overflow x hidden ne marche pas sur Safari*/
+}
+/*BARRE DE NAVIGATION + MENU RESPONSIVE */
+nav {
+    color: white;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+li.closeResponsive {
+    display: none;
+}
+
+ul.responsiveNav {
+    display: none;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+ul.responsiveNav {
+    text-align: right;
+    margin-right: 15px;
+}
+/*SÉPARATEUR JAUNE */
+div.separator {
+    position: absolute;
+    margin-top: -100px;
+    margin-left: -30px;
+    width: 120%;
+    left: -10%;
+    height: 78px;
+    -webkit-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    background-color: #D49E2E;
+    margin-top: -5%;
+    z-index: 5;
+    -webkit-box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.34);
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.34);
+}
+/* EN-TÊTE AVEC PHOTO + DÉGRADÉ*/
+header {
+    height: 90vh;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(65, 50, 50, 0.6)), to(rgba(65, 50, 50, 0.2))), url(images/header.jpg);
+    background-image: -webkit-linear-gradient(rgba(65, 50, 50, 0.6), rgba(65, 50, 50, 0.2)), url(images/header.jpg);
+    background-image: -o-linear-gradient(rgba(65, 50, 50, 0.6), rgba(65, 50, 50, 0.2)), url(images/header.jpg);
+    background-image: linear-gradient(rgba(65, 50, 50, 0.6), rgba(65, 50, 50, 0.2)), url(images/header.jpg);
+    background-size: cover;
+    background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+}
+/* TITRE GÉNÉRAL DU SITE : MON NOM+PRÉNOM */
+h1 {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 900;
+    font-size: 65px;
+    text-shadow: 8px 0px 0px rgba(255, 190, 0, 0.69);
+    margin-bottom: 0;
+}
+/* STYLE DES SECTIONS */
+section {
+    margin-bottom: 250px;
+    padding: 50px 150px;
+}
+/* SOUS-TITRE DE L'EN-TÊTE*/
+h2.headerSub {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 15px;
+}
+/* TITRE DES SECTIONS */
+h2.sectionTitle {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 900;
+    text-shadow: 8px 0px 0px rgba(255, 190, 0, 0.69);
+    margin-bottom: 0;
+    font-size: 50px;
+}
+/* SOUS-TITRE DES SECTIONS */
+h3.sectionSub {
+    margin-top: 0px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+}
+/*ALIGNEMENT À DROITE OU GAUCHE EN FONCTIONS DES DÉCISIONS PRISES DURANT LA RÉALISATION DE LA MAQUETTE */
+section#presentation h2,
+section#presentation h3 {
+    text-align: right;
+}
+/* CONTENEUR PRINCIPAL */
+main {
+    margin-top: 100px;
+    color: white;
+}
+/* PHOTO DE MOI POUR LA PRÉSENTATION */
+img.profil {
+    width: 400px;
+    height: 320px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+/* LABEL DES INFORMATIONS */
+p.labelInfo {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #FFB900;
+    margin-bottom: 0;
+    text-align: right;
+}
+/* CONTENU DES INFORMATIONS */
+p.info {
+    font-size: 30px;
+    margin-top: 0;
+    text-align: right;
+}
+/* LONGUE PRÉSENTATION */
+#longDesc {
+    line-height: 35px;
+    background-color: #e5e5e5;
+    padding: 40px;
+    text-align: justify;
+    color: #342525;
+    font-family: 'Roboto Slab', serif;
+    -webkit-box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+/* AFFICHAGE QUAND TARGET */
+#longDesc:target {
+    display: block;
+}
+/* POUR PLACER LE BOUTON "PRÉSENTATION DÉTAILLÉE */
+div.moreBtn {
+    margin-top: 40px;
+    text-align: right;
+}
+/*BOUTON PRÉSENTATION DÉTAILLÉE */
+a.moreDesc {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px dashed white;
+}
+/* BLOC PRÉSENTATION (IMAGE + LABELS+ INFOS) */
+div.shortPresentation {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+/* BLOC CONTENU DE LA PRÉSENTATION (LABELS + INFOS) */
+div.shortContent {
+    padding-right: 40px;
+}
+/* CARTE DE L'OUEST */
+img.bzhMap {
+    position: absolute;
+    width: 400px;
+    left: 0;
+    top: -20%;
+}
+/* TEXTE 2000 AFFICHÉ DERRIÈRE LE LABEL ÂGE */
+p.boldYear {
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.2);
+    bottom: 0;
+    font-weight: 600;
+    position: absolute;
+    z-index: 0;
+    margin: 0;
+    right: 0;
+}
+/* POUR PLACER LE TEXTE DE L'ÂGE AU DESSUS DU 2000 EN FOND */
+.age {
+    position: relative;
+}
+
+.age .labelInfo,
+.age .info {
+    position: relative;
+    z-index: 1;
+}
+
+div.age {
+    position: relative;
+}
+/* POUR PLACER L'ÉCRITURE CHINOISE */
+div.chinoisTradBlock {
+    position: relative;
+}
+/* ÉCRITURE CHINOISE EN FOND */
+p.chinoisTrad {
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.2);
+    bottom: 0;
+    position: absolute;
+    z-index: 0;
+    margin: 0;
+    right: 0;
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+/*TITRE DE LA SECONDE PARTIE */
+section#portraitChinois h2 {
+    margin-top: 150px; /* Pour l'espacer un petit peu car sinon trop rapproché */
+}
+/*BLOC DE BOUTONS JAUNES */
+div.portraitChinoisIf {
+    margin-top: 40px;
+}
+/*BLOC DIVISÉ EN DEUX POUR L'AFFICHAGE RESPONSIVE (FONCTIONNALITÉ "VOIR +") */
+div.portraitChinoisIf div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    text-align: center;
+}
+/* BOUTON JAUNE */
+a.chinoisIf {
+    background-color: #D49E2E;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    color: white;
+    margin: 10px 0;
+    width: 20%;
+}
+/*BOUTON VOIR + (RESPONSIVE) */
+a.chinoisIfMore {
+    background-color: #a2906c;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    color: white;
+    margin: 10px 0;
+    display: none;
+}
+/* QUAND LE BOUTON EST CLIQUÉ, AFFICHÉ LA TOTALITÉ (RESPONSIVE) */
+#moreChinois:target {
+    display: block;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+}
+/* BOÎTE GÉNÉRALE DE LA MODALE (FOND NOIR LÉGÉREMENT TRANSPARENT */
+div.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.21);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow-y: hidden;
+
+}
+/*BOÎTE MODALE */
+div.contentModal {
+    position: relative;
+    width: 50%;
+    background-color: white;
+    color: #525252;
+    border-top: 30px solid #D49E2E;
+    border-bottom: 30px solid #D49E2E;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px 20px 20px 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 60px #000;
+    box-shadow: 0px 0px 60px #000;
+}
+/* BOÎTE MODALE "EXTRA" AVEC IMAGE OU IFRAME */
+div.contentModalExtra {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    color: #525252;
+    border-top: 30px solid #D49E2E;
+    border-bottom: 30px solid #D49E2E;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding-right: 20px;
+    overflow-y: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 60px #000;
+    box-shadow: 0px 0px 60px #000;
+}
+/* IMAGE DE LA MODALE */
+div.contentModalExtra img {
+    height: 100%;
+    width: 40%;
+    -o-object-fit: cover;
+    object-fit: cover;
+
+}
+/* IFRAME DE LA MODALE */
+div.contentModalExtra iframe {
+    height: 100%;
+    border: none;
+}
+/*TEXTE DES MODALES */
+p.chinoisText {
+    margin-left: 20px;
+    text-align: justify;
+    line-height: 1.5;
+}
+/* BOUTON "EN SAVOIR +" DANS LA MODALE */
+a.more {
+    background-color: #D49E2E;
+    padding: 15px;
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    margin: 10px 0;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+}
+/* POSITIONNEMENT DES ICÔNES PAR RAPPORT AU TEXTE DU BOUTON "EN SAVOIR +" */
+a.more svg {
+    vertical-align: -25%;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+/*GESTION DE L'AFFICHAGE DES MODALES */
+/*PAR DÉFAUT ELLES SONT TOUTES CACHÉES */
+#chinoisLivre,
+#chinoisLangInfo,
+#chinoisPlat,
+#chinoisMusique,
+#chinoisPays,
+#chinoisFilm,
+#chinoisSocial,
+#chinoisSite,
+#chinoisVine,
+#chinoisLogiciel,
+#chinoisRegion,
+#chinoisExperience,
+#chinoisLangue,
+#chinoisSerie {
+    display: none;
+}
+/* LORSQUE L'ON CLIQUE SUR LE BOUTON CORRESPONDANT, LA MODALE S'AFFICHE */
+#chinoisLivre:target,
+#chinoisLangInfo:target,
+#chinoisPlat:target,
+#chinoisMusique:target,
+#chinoisPays:target,
+#chinoisFilm:target,
+#chinoisSocial:target,
+#chinoisSite:target,
+#chinoisVine:target,
+#chinoisLogiciel:target,
+#chinoisRegion:target,
+#chinoisExperience:target,
+#chinoisLangue:target,
+#chinoisSerie:target {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-animation: fade 0.5s;
+    animation: fade 0.5s;
+
+}
+/* PETITE ANIMATION FADE POUR LES MODALES (QUI SERA UTILISÉE À PLUSIEURS REPRISES PAR LA SUITE) */
+@-webkit-keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+/* CROIX POUR FERMER LA BOÏTE MODALE */
+a.closeModal  {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    top: 35px;
+    right: 40px;
+    background-color: #D49E2E;
+    padding: 10px 10px 6px 10px;
+    box-sizing: border-box;
+    margin: 0;
+    display: block;
+    border-radius: 4px;
+}
+/* STYLE DE LA SECTION SKILLS */
+#skills {
+    margin-top: -5%;
+    padding: 0;
+    margin-bottom: 120px;
+}
+/* TITRE DE LA SECTION SKILLS UN PEU DIFFÉRENT DES AUTRES TITRES DE SECTIONS */
+#skills h2 {
+    text-align: right;
+    padding-top: 200px;
+    margin-right: 150px;
+}
+/* SOUS-TITRE DE LA SECTION SKILLS UN PEU DIFFÉRENT DES AUTRES SOUS-TITRES DE SECTION */
+#skills h3 {
+    text-align: right;
+    margin-right: 150px;
+}
+/* BLOC AVEC L'IMAGE DE FOND (RUBIK CUBE) + LE DÉGRADÉ */
+div.skillsBg {
+    height: 100vh;
+    -webkit-clip-path: polygon(0 10%, 100% 0, 101% 101%, 0 101%);
+    clip-path: polygon(0 10%, 100% 0, 101% 101%, 0 101%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 37, 37, 0.24)), to(rgba(52, 37, 37, 1))), url(images/skills.jpg);
+    background-image: -webkit-linear-gradient(rgba(52, 37, 37, 0.24), rgba(52, 37, 37, 1)), url(images/skills.jpg);
+    background-image: -o-linear-gradient(rgba(52, 37, 37, 0.24), rgba(52, 37, 37, 1)), url(images/skills.jpg);
+    background-image: linear-gradient(rgba(52, 37, 37, 0.24), rgba(52, 37, 37, 1)), url(images/skills.jpg);
+    background-size: cover;
+}
+/* BARRE D'APPLICATIONS (PRÉSENTATIONS DES OUTILS) */
+ul.skillsDock {
+    margin: 0;
+    padding: 20px;
+    list-style: none;
+    background-color: blue;
+    display: inline-block;
+    background-color: rgba(240, 255, 255, 0.22);
+    border: 1px solid #212121;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+/* ICÔNES DES APPLICATIONS POUR LE DOCK */
+ul.skillsDock img {
+    width: 40px;
+}
+/* QUAND HOVER, UN PETIT TOOLTIP APPRAIT*/
+li.tooltip {
+    display: inline-block;
+    padding: 0 15px;
+    position: relative;
+}
+/* ENGLOBE DE DOCK D'APPLICATIONS POUR POUVOIR LE POSITIONNER */
+div.skillsContent {
+    position: relative;
+    margin-top: -70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+}
+
+/* TUTORIEL DU TOOLTIP TROUVÉ SUR W3.SCHOOL */
+span.tooltipText {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(23, 22, 22, 0.83);
+    border: 1px solid rgba(136, 136, 136, 0.42);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    margin-bottom: 10px;
+    left: 50%;
+    margin-left: -60px;
+}
+span.tooltipText::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(23, 22, 22, 0.83) transparent transparent transparent;
+}
+li.tooltip:hover span.tooltipText {
+    visibility: visible;
+    animation: fade 0.8s;
+}
+/* STYLE DE LA SECTION RÉALISATIONS */
+#realisations {
+    padding: 50px 250px;
+}
+/* TITRES DES SECTIONS RÉALISATIONS ET CONTACT */
+#realisations h2,
+#contact h2  {
+    margin-top: 100px;
+    text-align: center;
+}
+#realisations h3,
+#contact h3 {
+    text-align: center;
+}
+/* ENGLOBE TOUS LES ÉLÉMENTS DE RÉALISATIONS */
+div.realisationsContent {
+    width: 100%;
+    margin-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+/* ENGLOBE L'APERÇU, L'ÎCONE D'OUTIL + LE TAG DE CONTEXTE*/
+div.realisationsElement {
+    width: 400px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    position: relative;
+
+}
+/* IMAGE DE LA GALERIE RÉALISATIONS*/
+img.thumb {
+    width: 100%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.62);
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.62);
+
+}
+/* AU SURVOL, AUGMENTATION LÉGÈRE DE LA TAILLE */
+div.realisationsElement:hover {
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+}
+/*STYLE DIFFÉRENT POUR CHAQUE ÉLÉMENT */
+#youThumb {
+    margin-top: 100px;
+    width: 100%;
+}
+#autoportraitThumb {
+    width: 40%;
+}
+#mdlThumb {
+    margin-top: 100px;
+    width: 55%;
+}
+#deckappsThumb {
+    margin-top: 100px;
+}
+#snapcastThumb {
+    width: 40%;
+}
+#deckappsThumb {
+    width: 40%;
+}
+/* LISTE D'OUTILS + TAG DE CONTEXTE */
+ul.tools {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: -30px;
+    right: -20px;
+}
+/* ÉLÉMENT DE LA LISTE D'OUTILS */
+ul.tools li {
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+}
+/* ICÔNE DE LA LISTE D'OUTILS */
+ul.tools img {
+    width: 70px;
+}
+/* TAG DE CONTEXTE */
+span.where {
+    background-color: rgba(212, 158, 46, 0.87);
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    top: -10px;
+
+}
+/* STYLE DE LA SECTION CONTACT */
+section#contact {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+/* FORMULAIRE DE CONTACT */
+form {
+    margin-top: 50px;
+    width: 50%;
+}
+/* CHAMP DE SAISIE COURTE + CHAMP DE SAISIE LONGUE */
+input,
+textarea {
+    background-color: transparent;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    color: #eee;
+    font-size: 20px;
+    margin-bottom: 20px;
+    outline: 0 none;
+    width: 100%;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    position: relative;
+    z-index: 2;
+    resize: none;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+/* LABEL DU FORMULAIRE, AFFICHÉ EN FOND */
+label {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    background-color: #342525;
+    padding: 2px 5px;
+    color: rgba(238, 238, 238, 0.22);
+    margin-left: 10px;
+    -webkit-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
+    font-size: 40px;
+    font-weight: 700;
+    z-index: 0;
+    letter-spacing: 1px;
+}
+/* FAIRE EN SORTE QUE LES PLACEHOLDER SOIT TOTALEMENT OPAQUE POUR LE FORMULAIRE */
+::-webkit-input-placeholder {
+    color: #eee;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #eee;
+    opacity: 1;
+}
+
+::-ms-input-placeholder {
+    color: #eee;
+    opacity: 1;
+}
+
+::placeholder {
+    color: #eee;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #eee;
+}
+
+::-ms-input-placeholder {
+    color: #eee;
+}
+
+/* ENGLOBE LABEL ET INPUT/TEXTAREA*/
+div.formElement {
+    position: relative;
+}
+/* BOUTON ENVOYER */
+button {
+    background-color: #D49E2E;
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    margin: 10px 0;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    border: none;
+    outline: 0 none;
+    -webkit-box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.3);
+}
+/* PIED DE PAGE */
+footer {
+    padding-bottom: 100px;
+    text-align: center;
+}
+/* TEXTE DU PIED DE PAGE */
+footer p {
+    color: white;
+    font-size: 14px;
+    line-height: 25px;
+}
+/* LIEN DU PIED DE PAGE */
+footer a {
+    color: white;
+    text-decoration: none;
+    border-bottom: dashed 1px white;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+/* STYLE DU LIEN AU SURVOL */
+footer a:hover {
+    opacity: 0.7;
+}
+
+/* RESPONSIVE */
+
+/*POUR LES ÉCRANS AVEC UNE LARGEUR MAXIMALE DE 1335px */
+@media only screen and (max-width:1335px) {
+    .bzhMap {
+        display: none;
+    }
+     div.chinoisTradBlock {
+        display: none;
+    }
+    a.chinoisIf {
+        width: 100%;
+        text-align: center;
+    }
+
+    a.chinoisIfMore {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+    #moreChinois {
+        display: none;
+        text-align: center;
+
+    }
+
+    div.portraitChinoisIf {
+        padding: 30px;
+    }
+
+}
+/* POUR LES ÉCRANS AVEC UNE LARGEUR MAXIMALE DE 1000px */
+@media only screen and (max-width:1000px) {
+    div.shortPresentation {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    div.shortPresentation p {
+        text-align: center;
+    }
+
+    div.shortContent {
+        margin-top: 20px;
+        padding-right: 0;
+    }
+
+    img.profil {
+        margin: 0 auto;
+    }
+
+    p.boldYear {
+        bottom: 10px;
+        position: absolute;
+        z-index: 0;
+        margin: 0;
+        left: 0;
+
+    }
+    section#presentation h2,
+    section#presentation h3,
+    #portraitChinois h2,
+    section#skills h2,
+    section#skills h3,
+    #portraitChinois h3,
+    #realisations h2,
+    #realisations h3 {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+    span.where {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    div.skillsBg {
+        background-position: center;
+    }
+
+    div.moreBtn {
+        text-align: center;
+    }
+}
+/* POUR LES ÉCRANS AVEC UNE LARGEUR MAXIMALE DE 700px */
+@media only screen and (max-width:700px) {
+    h2.sectionTitle {
+        margin-bottom: 10px;
+    }
+
+    ul.tools img {
+        width: 30px;
+    }
+
+    section {
+        margin-bottom: 100px;
+    }
+
+    h1 {
+        padding: 0 40px;
+    }
+
+    nav {
+        margin: 0;
+        width: 100%;
+        right: 0;
+    }
+
+    ul.responsiveNav {
+        display: block;
+    }
+
+    li.closeResponsive {
+        display: block;
+    }
+
+    #links {
+        display: none;
+        background-color: #342525;
+        margin: 0;
+        padding: 0 40px;
+        position: absolute;
+        top: -40px;
+        left: 0;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    #links li {
+        display: block;
+        width: 100%;
+        text-align: right;
+        padding: 30px 0;
+        text-transform: uppercase;
+    }
+
+    #links:target {
+        display: block;
+        -webkit-animation: fade 0.5s;
+        animation: fade 0.5s;
+    }
+    div.modal {
+    background-color: rgba(0, 0, 0, 0.35);
+    }
+    div.contentModal {
+        width: 80%;
+        box-shadow: none;
+    }
+    div.contentModalExtra {
+        top: 5%;
+        width: 80%;
+        height: 70%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    div.contentModalExtra img,
+    div.contentModalExtra iframe {
+        width: 100%;
+    }
+
+    div.contentModalExtra a,
+    div.contentModal a {
+        text-align: center;
+    }
+
+    div.contentModalExtra p {
+        padding: 20px;
+        margin-left: 0;
+    }
+
+    a.closeModal {
+        top: 25px;
+        right: 10px;
+    }
+
+    #realisations {
+        padding: 80px;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+/* POUR LES ÉCRANS AVEC UNE LARGEUR D'ÉCRAN MAXIMALE DE 672px */
+@media only screen and (max-width:672px) {
+    header {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 93%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 93%, 0% 100%);
+    }
+}
+/* POUR LES ÉCRANS AVEC UNE LARGEUR MAXIMALE DE 615px*/
+@media only screen and (max-width:615px) {
+    div.realisationsContent {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+    }
+
+    #youThumb {
+        width: 100%;
+    }
+
+    #autoportraitThumb {
+        width: 70%;
+        margin-bottom: 100px;
+    }
+
+    #mdlThumb {
+        width: 70%;
+    }
+
+    #deckappsThumb {
+        width: 70%;
+    }
+
+    #snapcastThumb {
+        width: 70%;
+    }
+}
+/* POUR LES ÉCRANS AVEC UNE LARGEUR MAXIMALE DE 530px */
+@media only screen and (max-width:530px) {
+    header {
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 98%, 0 100%);
+        clip-path: polygon(0 0, 100% 0%, 100% 98%, 0 100%);
+    }
+    section {
+        padding: 50px;
+    }
+
+    ul.skillsDock {
+        margin-top: -250px;
+        text-align: center;
+        background-color: transparent;
+        border: none;
+    }
+
+    ul.skillsDock li {
+        margin: 20px 10px;
+    }
+
+    img.profil {
+        width: 100%;
+    }
+
+    h2.sectionTitle {
+        font-size: 35px;
+        padding: 0px 10px;
+    }
+    footer {
+        padding: 20px 100px;
+    }
+}
+/* POUR LES ÉCRANS AVEC UNE LARGEUR MAXIMALE DE 440px */
+@media only screen and (max-width:440px) {
+    section {
+        padding: 25px;
+    }
+
+    img.profil {
+        width: 80%;
+    }
+
+    #autoportraitThumb,
+    #snapcastThumb,
+    #deckappsThumb,
+    #mdlThumb {
+        width: 100%;
+    }
+
+    ul.tools li {
+        padding: 0 0 10px 0;
+    }
+
+    ul.tools li:last-child {
+        margin-right: 10px;
+    }
+
+    #realisations {
+        padding: 50px 30px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    header h2 {
+        padding: 0 20px;
+    }
+}
+/* POUR LES ÉCRANS AVEC UNE LARGEUR MAXIMALE DE 390px */
+@media only screen and (max-width: 390px) {
+    header {
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 98%, 0 100%);
+        clip-path: polygon(0 0, 100% 0%, 100% 98%, 0 100%);
+    }
+}
+/* POUR LES ÉCRANS AVEC UNE LARGEUR MAXIMALE DE 375px */
+@media only screen and (max-width: 375px) {
+    section {
+        padding: 50px 5px;
+    }
+
+    footer {
+        padding: 20px 100px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+}

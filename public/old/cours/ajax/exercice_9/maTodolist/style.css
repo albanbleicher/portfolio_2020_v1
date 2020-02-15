@@ -1,0 +1,11 @@
+.todolist {
+
+}
+
+.todolist > .list > ul {
+   list-style: none;
+}
+
+.todolist .item .close {
+   color: red;
+}

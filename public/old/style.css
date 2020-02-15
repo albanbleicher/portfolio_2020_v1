@@ -1,0 +1,836 @@
+@font-face {
+    font-family: '.SF Compact Display';
+    src: url('fonts/SFCompactDisplay-Black.woff2') format('woff2'),
+        url('fonts/SFCompactDisplay-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '.SF Compact Display';
+    src: url('fonts/SFCompactDisplay-Regular.woff2') format('woff2'),
+        url('fonts/SFCompactDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#mdl {
+    box-sizing: border-box;
+    border: 1px solid #bcbcbc;
+}
+
+#youImg {
+    width: 80%;
+}
+
+#deckappsImg {
+    width: 100%;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'SF Compact Display', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body.modalOpen {
+    overflow: hidden;
+}
+
+nav {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #191919;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+nav a:hover {
+    opacity: 0.5;
+}
+header {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #191919;
+}
+
+.img {
+    width: 40%;
+    height: 100vh;
+    display: block;
+}
+
+.img img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    position: fixed;
+    animation: imgAppear 2.5s;
+}
+
+p.imgCredits {
+    position: fixed;
+    color: white;
+    background-color: #c29f76;
+    padding: 0 20px;
+    bottom: 0px;
+    margin: 0;
+    font-size: 12px;
+    width: 40%;
+    box-sizing: border-box;
+    height: 40px;
+    line-height: 40px;
+    visibility: hidden;
+
+}
+
+img.portrait:hover + p.imgCredits {
+    animation: showCredits 0.5s forwards;
+}
+
+p.imgCredits:hover {
+    visibility: visible;
+}
+
+@keyframes showCredits {
+    from {
+        transform: translateY(40px);
+    }
+
+    to {
+        visibility: visible;
+        transform: translateY(0px);
+
+    }
+}
+
+.imgCredits a {
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes imgAppear {
+    0% {
+        transform: translateY(100%);
+    }
+
+    70% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.content {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-left: 40%;
+    top: 0;
+    z-index: 1;
+    padding: 0 100px;
+    box-sizing: border-box;
+    background-image: url(img/BG.svg);
+    background-size: 25px 25px;
+    background-repeat: repeat;
+}
+
+.content h1 {
+    font-weight: 700;
+    font-size: 80px;
+    margin-bottom: 0;
+    animation: slideTitles 1.5s forwards;
+    display: inline-block;
+}
+.content h1::after {
+content: "";
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(221, 168, 105, 0.78);
+    padding: 0 10px;
+    left: -10px;
+    z-index: -1;
+    bottom: 0px;
+}
+.content p {
+    margin-top: 0;
+    font-size: 25px;
+    animation: slideTitles 1.8s forwards;
+}
+@keyframes slideTitles {
+    from {
+        opacity: 0;
+        transform: translateX(-40%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.contentPresentation {
+    width: 60%;
+    margin-left: 40%;
+    padding: 100px;
+    box-sizing: border-box;
+    padding-bottom: 120px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 40px;
+    color: #191919;
+    margin-bottom: 5px;
+    display: inline-block;
+    position: relative;
+}
+h2::after {
+content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: rgba(221, 168, 105, 0.78);
+    padding: 0 10px;
+    left: -10px;
+    z-index: -1;
+    bottom: 0px;
+}
+.contentPresentation p {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 35px;
+    color: #707070;
+    font-family: 'Helvetica Neue', 'Heveltica', 'Arial', sans-serif;
+    font-weight: 400;
+}
+
+.contentPresentation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 35px;
+    color: #707070;
+}
+
+.contentPresentation li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.contentPresentation li:last-child {
+    margin-right: 0;
+}
+
+.contentPresentation a, div.contact a {
+    color: #886448;
+    text-decoration: none;
+    border-bottom: 2px solid #886448;
+}
+div.realisations {
+    background-color: #191919;
+    
+    position: relative;
+   
+    z-index: 3;
+    padding: 100px;
+}
+div.realisations  h2 {
+    color: white;
+}
+.realisationsIntro {
+     margin-top: 0;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 35px;
+    color: #dbdbdb;
+    font-family: 'Helvetica Neue', 'Heveltica', 'Arial', sans-serif;
+    font-weight: 400;
+}
+div.contact,
+div.footer {
+    position: relative;
+    background-color: white;
+    z-index: 3;
+    padding: 100px 100px 0 100px;
+}
+
+
+div.contact p,
+div.footer p {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 35px;
+    color: #707070;
+    font-family: 'Helvetica Neue', 'Heveltica', 'Arial', sans-serif;
+    font-weight: 400;
+}
+
+div.workGrid {
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+div.workElement {
+    position: relative;
+    width: 48%;
+    height: 400px;
+    margin-bottom: 4vw;
+}
+
+div.workElement::before {
+    display: none;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(25, 25, 25);
+    top: 0;
+}
+
+div.workElement img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+div.workInfo {
+    position: absolute;
+    top: 0;
+    color: white;
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+}
+
+div.workInfo h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 0;
+    position: relative;
+}
+div.workInfo h3::after {
+content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: rgba(221, 168, 105, 0.78);
+    padding: 0 10px;
+    left: -10px;
+    z-index: -1;
+    bottom: 0px;
+}
+div.workInfo p {
+    font-style: italic;
+    font-weight: 300;
+}
+
+div.workInfo a {
+    background-color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #191919;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+div.workElement:hover::before,
+div.workElement:hover div.workInfo {
+    display: flex;
+    animation: workDisp 0.25s forwards;
+}
+
+@keyframes workDisp {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+div.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    height: 100%;
+    z-index: 4;
+    overflow-y: auto;
+    color: #707070;
+    font-size: 20px;
+    text-align: justify;
+}
+
+div.modal ul {
+    list-style: circle;
+}
+
+div.modalHead {
+    height: 80px;
+    line-height: 80px;
+    text-align: right;
+}
+
+div.modalHead a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #191919;
+    font-weight: lighter;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+div.modalContent {
+    padding: 100px;
+}
+
+.imgModalWork {
+ text-align: center;
+}
+
+img.modalWork {
+    width: 33%;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+.modalWork.wide{
+    width: 80%;
+}
+span.date {
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #606060;
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid #191919;
+    box-sizing: border-box;
+}
+
+div.modalContent h2 {
+    margin-bottom: 20px;
+}
+
+a.buttonModal {
+    background-color: #191919;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 400;
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+}
+
+a.buttonModal:hover {
+    animation: hoverBtn 0.5s infinite;
+}
+
+@keyframes displayModal {
+    0% {
+        transform: translateY(100%);
+    }
+
+    50% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+b {
+    font-weight: normal;
+    color: #191919;
+}
+
+div.modalFooter {
+    padding: 100px;
+    text-align: center;
+}
+
+form {
+    margin-top: 100px;
+    padding: 30px 0;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+input,
+textarea,
+buton {
+    display: block;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin: 5px 0 25px 0;
+    border: none;
+    outline: 0 none;
+    background-color: #eee;
+    resize: none;
+    color: #191919;
+    transition: background 0.5s;
+    font-family: 'SF Compact Display', sans-serif;
+
+}
+
+button {
+    padding: 15px 20px;
+    box-sizing: border-box;
+    margin: 5px 0 25px 0;
+    border: none;
+    outline: 0 none;
+    background-color: rgba(221, 168, 105,1);
+    resize: none;
+    color: #fff;
+    transition: opacity 0.5s;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+label {
+    color: #191919;
+    padding-bottom: 25px;
+}
+
+input:focus,
+textarea:focus {
+    background: #191919;
+    color: white;
+}
+
+input:invalid {
+    background: #be3636;
+    color: white;
+}
+
+div.footer {
+    padding-bottom: 100px;
+}
+
+div.wrapWhite {
+    background-color: white;
+    position: relative;
+    z-index: 4;
+}
+
+div.footer p {
+    font-size: 13px;
+}
+
+div.footer a {
+    text-decoration: none;
+    color: #707070;
+    position: relative;
+    width: 700px;
+}
+
+div.footer a:after {
+    width: 700px;
+    position: absolute;
+    display: none;
+    content: "voir mon profil LinkedIn";
+    top: -12px;
+    padding-left: 35px;
+}
+
+div.footer a:hover::after {
+    display: block;
+    opacity: 0;
+    animation: slideLink 1s forwards;
+}
+
+.creditsPhoto {
+    font-size: 8px;
+    display: none;
+}
+
+@keyframes slideLink {
+    0% {
+        transform: translateX(-170px);
+    }
+
+    40% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+div.messageSent {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #16bc82;
+    color: white;
+    z-index: 10;
+    animation: fadeOut 5s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    10% {
+        transform: translateY(0px);
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width:970px) {
+    nav {
+        display: none;
+    }
+
+    div.intro {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .img {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align: middle;
+        animation: none;
+        position: relative;
+    }
+
+    .content {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 100px;
+        padding-bottom: 0;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        box-sizing: border-box;
+        position: relative;
+        box-sizing: border-box;
+        z-index: 3;
+    }
+
+    .contentPresentation {
+        width: 100%;
+        margin-left: 0;
+        padding: 100px;
+        box-sizing: border-box;
+        padding-bottom: 120px;
+    }
+
+    div.workElement {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        margin-bottom: 4vw;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    img.portrait:hover + p.imgCredits {
+        animation: none;
+    }
+
+    a.buttonModal {
+        display: block;
+    }
+}
+
+@media only screen and (max-width:735px) {
+    button {
+        width: 100%;
+    }
+
+    form {
+        margin-top: 75px;
+    }
+
+    div.footer p {
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 50px;
+    }
+
+    .content {
+        padding: 0 75px;
+    }
+
+    .contentPresentation,
+    div.realisations,
+    div.contact,
+    div.footer,
+    div.modalContent {
+        padding: 75px;
+    }
+
+    .workGrid {
+        padding-top: 75px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    div.footer a:hover::after {
+        display: none;
+        animation: none;
+    }
+
+    .imgModalWork {
+        text-align: center;
+    }
+
+    img.modalWork {
+        width: 100%;
+        vertical-align: middle;
+        margin-top: 5px;
+    }
+
+    p.creditsPhoto {
+        display: block;
+    }
+}
+
+@media only screen and (max-width:515px) {
+    .content h1 {
+        font-size: 35px;
+        line-height: 50px;
+        margin-bottom: 10px;
+    }
+.content h1::after {
+    height: 20px;
+  
+}
+    .content p {
+        font-size: 17px;
+    }
+    div.workElement h3{
+        font-size: 17px;
+    }
+    .modalContent h2 {
+        font-size: 25px;
+    }
+
+}
+
+@media only screen and (max-width: 420px) {
+
+    .contentPresentation,
+    div.realisations,
+    div.contact,
+    div.footer,
+    div.modalContent {
+        padding: 50px;
+    }
+
+    form {
+        margin-top: 50px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    div.contentPresentation p,
+    p.realisationsIntro,
+    div.contact p,
+    div.presentation ul,
+    diiv.presentation a {
+        font-size: 17px;
+    }
+
+    div.workGrid {
+        padding-top: 50px;
+    }
+
+    div.workElement {
+        height: 290px;
+    }
+}
