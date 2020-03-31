@@ -456,6 +456,7 @@ footer a {
 }
 
 .modalContent a {
+  cursor: pointer;
   color: #000;
   text-decoration: none;
   font-style: italic;
