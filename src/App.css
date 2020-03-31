@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600i,700,800&display=swap');
 /* classe hidden pour cacher les components non actifs */
 .hidden {
-  display: none!important; 
+  display: none!important;
 }
 
 body,
@@ -16,7 +16,7 @@ html {
     max-width: 100%;
     font-family: Avenir, sans-serif;
     background-color: #000;
-    cursor: url(assets/images/cursor.svg) 2 2, auto;
+    /* cursor: url(assets/images/cursor.svg) 2 2, auto; */
     overflow-x: hidden;
 }
 header {
@@ -45,7 +45,7 @@ header a {
     color: #fff;
     text-decoration: none;
     transition: border .2s;
-    cursor: url(assets/images/pointer.svg) 12 12, pointer
+    /* cursor: url(assets/images/pointer.svg) 12 12, pointer */
 }
 
 header .header-head {
@@ -121,7 +121,7 @@ header .header-footer .call-to-scroll a {
     font-style: italic;
     margin-left: 25px;
     font-weight: lighter;
-    cursor: url(assets/images/pointer.svg) 0 0, pointer
+    /* cursor: url(assets/images/pointer.svg) 0 0, pointer */
 }
 
 main {
@@ -231,7 +231,7 @@ main .project-vue .project-info a {
     font-weight: lighter;
     position: absolute;
     transition: background-color .5s;
-    cursor: url(assets/images/pointer.svg) 0 0, pointer;
+    /* cursor: url(assets/images/pointer.svg) 0 0, pointer; */
     transition: transform 0.5s ease;
 }
 
