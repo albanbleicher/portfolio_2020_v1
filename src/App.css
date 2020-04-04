@@ -18,6 +18,7 @@ html {
     background-color: #000;
     /* cursor: url(assets/images/cursor.svg) 2 2, auto; */
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 header {
     width: 100%;
@@ -161,17 +162,24 @@ main .project-vue {
   position: absolute;
   top: 0;
   display: none;
+  cursor: pointer;
 }
 .downArrow {
   position: absolute;
   bottom: -20%;
   display: none;
+  cursor: pointer;
+
 }
 .leftArrow {
   margin-left: -50px;
+  cursor: pointer;
+
 }
 .rightArrow {
   margin-right: -50px;
+  cursor: pointer;
+  
 }
 .leftArrow,.rightArrow
  {
