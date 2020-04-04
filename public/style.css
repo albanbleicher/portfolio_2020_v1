@@ -142,6 +142,7 @@ footer {
 .social li {
   margin-right: 25px;
   display: inline;
+  position: relative;
 }
 @media only screen and (max-width:900px) {
   header {
