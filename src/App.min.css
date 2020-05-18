@@ -169,15 +169,18 @@ main .project-vue {
 }
 
 .leftArrow {
-  margin-left: -50px
+  margin-left: -50px;
+
 }
 
 .rightArrow {
-  margin-right: -50px
+  margin-right: -50px;
+
 }
 
 .leftArrow, .rightArrow {
-  transition: transform .7s ease
+  transition: transform .7s ease;
+  cursor: pointer;
 }
 
 .leftArrow:hover, .rightArrow:hover {
@@ -415,7 +418,8 @@ footer a {
 .modalClose {
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 12px
+  font-size: 12px;
+  cursor: pointer;
 }
 
 .modal h2 {

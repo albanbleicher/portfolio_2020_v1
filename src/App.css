@@ -179,7 +179,7 @@ main .project-vue {
 .rightArrow {
   margin-right: -50px;
   cursor: pointer;
-  
+
 }
 .leftArrow,.rightArrow
  {
@@ -397,6 +397,7 @@ footer a {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 12px;
+  cursor: pointer;
 }
 .modal h2{
   font-family: Raleway, sans-serif;
