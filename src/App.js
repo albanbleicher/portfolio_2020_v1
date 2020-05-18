@@ -25,7 +25,7 @@ class App extends Component {
         date:'En cours',
         contexte:'Confinement 2020',
         type:'Application mobile',
-        largeDesc:"inter — val est une application permettant de s'entraîner à reconnaitre des intervalles de notes. À destination des musiciens, cette application permet de garder un suivi de nos entrainements, et offre un aspect communautaire où les utilisateurs peuvent se suivre mutuellement et pourront bientôt se challenger. \n\r J'ai réalisé cette application pendant le confinement 2020 lié au Covid-19, afin de m'auto-former sur des technologies récentes. \n\r Développée avec React Native, et Firebase. Débuggage sous Apple Xcode.",
+        largeDesc:"inter — val est une application permettant de s'entraîner à reconnaitre des intervalles de notes. À destination des musiciens, cette application permet de garder un suivi des entrainements, et offre un aspect communautaire où les utilisateurs peuvent se suivre mutuellement et pourront bientôt se challenger. \n\r J'ai réalisé cette application pendant le confinement 2020 lié au Covid-19, afin de m'auto-former sur des technologies récentes. \n\r Développée avec React Native, et Firebase. Débuggage sous Apple Xcode.",
         modalScreenshots:interval,
         linkModal:false
       },
