@@ -1,3 +1,22 @@
+export const interval = [
+  require('./assets/images/projects/interval/1.png'),
+  require('./assets/images/projects/interval/2.png'),
+  require('./assets/images/projects/interval/3.png'),
+  require('./assets/images/projects/interval/4.png'),
+  require('./assets/images/projects/interval/5.png'),
+]
+export const mydo = [
+  require('./assets/images/projects/mydo/1.png'),
+  require('./assets/images/projects/mydo/2.png'),
+  require('./assets/images/projects/mydo/3.png'),
+  require('./assets/images/projects/mydo/4.png'),
+  require('./assets/images/projects/mydo/5.png'),
+]
+export const teetime = [
+  require('./assets/images/projects/teetime/1.png'),
+  require('./assets/images/projects/teetime/2.png'),
+  require('./assets/images/projects/teetime/3.png'),
+]
 export const apdc = [
   require('./assets/images/projects/apdc/1.png'),
   require('./assets/images/projects/apdc/2.png'),

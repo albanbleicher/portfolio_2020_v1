@@ -12,19 +12,43 @@ import {
   left_arrow,
   up_arrow,
   down_arrow,
+  interval,
+  mydo,
+  teetime,
 } from './images'
 class App extends Component {
   state = {
     objectData : [
       {
-        titre:'Découvrir l\'autisme',
-        img: webdoc[0],
+        titre:'inter — val',
+        img:interval[0],
         date:'En cours',
-        contexte:'MMI',
-        type:'Webdocumentaire',
-        largeDesc:'Dans le cadre du module d\'infographie et de développement web, nous devions réaliser un webdocumentaire sur le sujet de notre choix. A travers mon webdocumentaire, vous pourrez découvrir les mots-clés concernants l\'autisme, mais  aussi des témoignages et des vidéos explicatives, afin d\'informer de manière interactive.',
-        modalScreenshots: webdoc,
+        contexte:'Confinement 2020',
+        type:'Application mobile',
+        largeDesc:"inter — val est une application permettant de s'entraîner à reconnaitre des intervalles de notes. À destination des musiciens, cette application permet de garder un suivi de nos entrainements, et offre un aspect communautaire où les utilisateurs peuvent se suivre mutuellement et pourront bientôt se challenger. \n\r J'ai réalisé cette application pendant le confinement 2020 lié au Covid-19, afin de m'auto-former sur des technologies récentes. \n\r Développée avec React Native, et Firebase. Débuggage sous Apple Xcode.",
+        modalScreenshots:interval,
         linkModal:false
+      },
+      {
+        titre:'Teetime',
+        img:teetime[0],
+        date:'En cours',
+        contexte:'Profesionnel',
+        type:'Plateforme e-commerce',
+        largeDesc:'Teetime est une plateforme e-commerce de customisation textile réalisée au sein de mon entreprise actuelle, Lelièvre Communication. Elle permet à l\'utilsateur de personnaliser son textile et de généré un BAT (bon à tirer) en fonction de sa personnalisation. Je suis apprenti développeur web au sein de Lelièvre Communication depuis septembre 2019, et je suis développeur front sur ce projet, aux côtés de mon tuteur, et de l\'équipe créative. J\'ai pu donc réalisé beaucoup de recherche sur la manipulation du SVG, grâce à l\'utilisation de la librairie SVG.js',
+        modalScreenshots:teetime,
+        linkModal:false
+
+      },
+      {
+        titre:'myDo',
+        img:mydo[0],
+        date:'février - mai 2020',
+        contexte:'Personnel',
+        type:'Crud vue js',
+        largeDesc:'myDo est une petite application CRUD dévelopée à l\'aide de Vue.js et Google Firebase. J\'ai créé ce projet simple afin de me former aux fondamentaux de Vue, et de comprendre les principes de base du NoSQL avec Google Firebase. Commencée en février, je l\'ai terminé en mai pendant le confinement 2020, en y rajoutant notamment la possibilité de se connecter avec son compte Google. \n\r Pour le déploiement, je suis passé par la plateforme CDN Netlify.',
+        modalScreenshots:mydo,
+        linkModal:'https://my-do.netlify.app/'
       },
       {
         titre:'A portée d\'Choeur',
