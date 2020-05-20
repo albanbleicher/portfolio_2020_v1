@@ -12,7 +12,8 @@ body, html {
   font-family: "Poppins", sans-serif;
   background-color: #000;
   /* cursor: none; */
-  overflow-x: hidden
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -117,7 +118,11 @@ header .header-footer .call-to-scroll a {
   font-style: italic;
   margin-left: 25px;
   font-weight: lighter;
-  /* cursor: none */
+  cursor: pointer;
+  transition: opacity 0.5s;
+}
+header .header-footer .call-to-scroll a:hover {
+  opacity: 0.6;
 }
 
 main {

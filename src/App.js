@@ -15,7 +15,10 @@ import {
   interval,
   mydo,
   teetime,
-} from './images'
+} from './images';
+document.getElementById('goToWork').addEventListener('click',function() {
+  document.getElementById("work").scrollIntoView(true);
+})
 class App extends Component {
   state = {
     objectData : [
@@ -142,7 +145,7 @@ modal.classList.remove('show');
   render()
   { return (
     <Fragment>
-    <main>
+    <main id='work'>
     <div className='project-vue'>
 
     <img className='upArrow' src={up_arrow} alt='left_arrow' onClick={this.handleClickPrev} />
