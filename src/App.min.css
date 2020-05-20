@@ -121,6 +121,10 @@ header .header-footer .call-to-scroll a {
   cursor: pointer;
   transition: opacity 0.5s;
 }
+header strong {
+
+  border-bottom:2px solid #4ce59a;
+}
 header .header-footer .call-to-scroll a:hover {
   opacity: 0.6;
 }
@@ -577,6 +581,7 @@ footer a {
     font-size: 14px;
     line-height: 30px
   }
+
 
   header .header-head a:hover {
     border-bottom: 1px solid rgba(255, 255, 255, .7)
