@@ -100,6 +100,9 @@ class App extends Component {
    componentWillMount = () => {
       document.addEventListener("keydown", this.closeModalEsc, false);
     }
+    componentDidMount = () => {
+      console.log('mounted');
+    }
   handleClickNext = () => {
     if(this.state.i === this.state.objectData.length-1) {
       this.setState({
@@ -162,6 +165,7 @@ modal.classList.remove('show');
         type={projet.type}
         openModal={this.openModal}
         hidden={i !== this.state.i ? true : false}
+        key={i}
         />
       )
     })}
