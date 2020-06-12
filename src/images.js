@@ -1,3 +1,11 @@
+export const heracles = [
+  require('./assets/images/projects/heracles/1.png'),
+  require('./assets/images/projects/heracles/2.png'),
+  require('./assets/images/projects/heracles/3.png'),
+  require('./assets/images/projects/heracles/4.png'),
+  require('./assets/images/projects/heracles/5.png'),
+  require('./assets/images/projects/heracles/6.png'),
+]
 export const interval = [
   require('./assets/images/projects/interval/1.png'),
   require('./assets/images/projects/interval/2.png'),

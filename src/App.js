@@ -15,6 +15,7 @@ import {
   interval,
   mydo,
   teetime,
+  heracles
 } from './images';
 document.getElementById('goToWork').addEventListener('click',function() {
   document.getElementById("work").scrollIntoView(true);
@@ -22,6 +23,16 @@ document.getElementById('goToWork').addEventListener('click',function() {
 class App extends Component {
   state = {
     objectData : [
+      {
+        titre:'Héraclès',
+        img:heracles[1],
+        date:'mai 2020',
+        contexte:'MMI',
+        type:'Webdocumentaire',
+        largeDesc:"\"Héraclès - l'histoire d'un demi-dieu\" est un webdocumentaire réalisé dans le cadre de mon année en MMI à Laval. Ce projet retrace l'histoire du héro grec à travers des œuvres d'art. De sa naissance à sa mort, en passant par les célèbres 12 travaux, l'histoire est accompagnée d'une ambiance sonore, et se termine par un extrait vidéo. \n\r Réalisé avec Vue.js",
+        modalScreenshots:heracles,
+        linkModal:'https://heracles.netlify.app'
+      },
       {
         titre:'inter — val',
         img:interval[0],
