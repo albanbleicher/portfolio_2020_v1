@@ -4,7 +4,6 @@ import Projet from './components/Projet'
 import Modal from './components/Modal'
 import {
   apdc,
-  webdoc,
   health_a_week,
   slash,
   digitalHapiness,

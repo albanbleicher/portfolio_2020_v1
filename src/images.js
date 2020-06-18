@@ -30,12 +30,6 @@ export const apdc = [
   require('./assets/images/projects/apdc/2.png'),
   require('./assets/images/projects/apdc/3.png'),
 ]
-export const webdoc = [
-  require('./assets/images/projects/webdoc/1.png'),
-  require('./assets/images/projects/webdoc/2.png'),
-  require('./assets/images/projects/webdoc/3.png'),
-  require('./assets/images/projects/webdoc/4.png')
-]
 export const health_a_week = [
   require('./assets/images/projects/health_a_week/1.jpg'),
   require('./assets/images/projects/health_a_week/2.jpg'),
